@@ -15,7 +15,7 @@ jobs:
     - name: Test
       run: python markdown_del_ins.py
     - name: Make source distribution
-      run: python setup.py sdist bdist_wheel
+      run: pip install wheel && python setup.py sdist bdist_wheel
     - name: Publish
       if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
       uses: pypa/gh-action-pypi-publish@master
