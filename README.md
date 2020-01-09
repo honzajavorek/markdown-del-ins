@@ -1,6 +1,6 @@
-# DEL/INS Extension for Python-Markdown
+# markdown_del_ins
 
-Interprets ``~~text~~`` as ``<del>text</del>`` and ``++text++`` as ``<ins>text</ins>``. Works with the [markdown](https://python-markdown.github.io/) package.
+Allows the [Markdown](https://python-markdown.github.io/) package to interpret ``~~text~~`` as ``<del>text</del>`` and ``++text++`` as ``<ins>text</ins>``.
 
 ## Installation
 

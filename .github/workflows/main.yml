@@ -10,5 +10,15 @@ jobs:
     - uses: actions/setup-python@v1
       with:
         python-version: '3.x'
-    - run: pip install -e .
-    - run: python markdown_del_ins.py
+    - name: Install
+      run: pip install -e .
+    - name: Test
+      run: python markdown_del_ins.py
+    - name: Make source distribution
+      run: python setup.py sdist bdist_wheel
+    - name: Publish
+      if: github.event_name == 'push' && startsWith(github.event.ref, 'refs/tags')
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        user: honzajavorek
+        password: ${{ secrets.PYPI_PASSWORD }}
