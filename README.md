@@ -1,37 +1,20 @@
-Del/Ins Extension for Python-Markdown
-=====================================
+# DEL/INS Extension for Python-Markdown
 
-Wraps the inline content with `ins` and `del` tags.
+Interprets ``~~text~~`` as ``<del>text</del>`` and ``++text++`` as ``<ins>text</ins>``. Works with the [markdown](https://python-markdown.github.io/) package.
 
+## Installation
 
-Installation
-------------
+    $ pip install git+git://github.com/honzajavorek/markdown-del-ins.git
 
-    pip install git+git://github.com/aleray/mdx_del_ins.git
+## Usage
 
-
-Usage
------
-
-    >>> import markdown
-    >>> src = """This is ++added content++ and this is ~~deleted content~~""" 
-    >>> html = markdown.markdown(src, ['del_ins'])
+    >>> from markdown import Markdown
+    >>> md = Markdown(extensions=['markdown_del_ins'])
+    >>> src = 'This is ++added content++ and this is ~~deleted **strong** content~~'
+    >>> html = md.convert(src)
     >>> print(html)
-    <p>This is <ins>added content</ins> and this is <del>deleted content</del>
-    </p>
+    <p>This is <ins>added content</ins> and this is <del>deleted <strong>strong</strong> content</del></p>
 
+## License & Credits
 
-Dependencies
-------------
-
-* [Markdown 2.0+](http://www.freewisdom.org/projects/python-markdown/)
-
-
-Copyright
----------
-
-2011, 2012 [The active archives contributors](http://activearchives.org/)
-All rights reserved.
-
-This software is released under the modified BSD License. 
-See LICENSE.md for details.
+This software is released under the modified BSD License. See [LICENSE](LICENSE) for details. The project is a fork of [aleray/mdx_del_ins](https://github.com/aleray/mdx_del_ins).
