@@ -8,6 +8,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-python@v1
-      with: python-version: '3.x'
+      with:
+        python-version: '3.x'
     - run: pip install -e .
     - run: python markdown_del_ins.py
