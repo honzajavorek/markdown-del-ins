@@ -4,16 +4,21 @@ Allows the [Markdown](https://python-markdown.github.io/) package to interpret `
 
 ## Installation
 
-    $ pip install markdown-del-ins
+```
+$ pip install markdown-del-ins
+```
 
 ## Usage
 
-    >>> from markdown import Markdown
-    >>> md = Markdown(extensions=['markdown_del_ins'])
-    >>> src = 'This is ++added content++ and this is ~~deleted **strong** content~~'
-    >>> html = md.convert(src)
-    >>> print(html)
-    <p>This is <ins>added content</ins> and this is <del>deleted <strong>strong</strong> content</del></p>
+```python
+>>> from markdown import Markdown
+>>> md = Markdown(extensions=['markdown_del_ins'])
+>>> src = 'This is ++added content++ and this is ~~deleted **strong** content~~'
+>>> html = md.convert(src)
+>>> print(html)
+<p>This is <ins>added content</ins> and this is <del>deleted <strong>strong</strong> content</del></p>
+
+```
 
 ## License & Credits
 
