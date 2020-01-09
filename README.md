@@ -4,7 +4,7 @@ Allows the [Markdown](https://python-markdown.github.io/) package to interpret `
 
 ## Installation
 
-    $ pip install git+git://github.com/honzajavorek/markdown-del-ins.git
+    $ pip install markdown-del-ins
 
 ## Usage
 
