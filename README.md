@@ -1,4 +1,4 @@
-# markdown_del_ins
+# markdown-del-ins
 
 Allows the [Markdown](https://python-markdown.github.io/) package to interpret ``~~text~~`` as ``<del>text</del>`` and ``++text++`` as ``<ins>text</ins>``.
 
